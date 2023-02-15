@@ -1,0 +1,15 @@
+__pycache__/
+
+venv*/
+
+data/
+results/
+
+*confusion_matrix.jpg
+
+*.zip
+*.pth
+*.log
+
+!.gitkeep
+!assets/

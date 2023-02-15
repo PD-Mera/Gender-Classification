@@ -1,0 +1,67 @@
+class:
+  num: 2
+  name: 
+    - female
+    - male
+
+modelname: regnety32gf
+image_size: [224, 224]
+load_checkpoint: ./weights/regnety32gf_last.pth
+
+log:
+  path: ./logs/
+  name: train.log
+  mode: w # a or w
+
+confusion_matrix: 
+  name: confusion_matrix.jpg 
+
+
+train:
+  path: ./data/Training/
+  epoch: 10
+  batch_size: 16
+  num_workers: 4
+  smooth: 0.95 # Apply smoothing label
+  optimizer: Adam
+  learning_rate: !!float 1e-6
+  loss_fn: CE
+  model_savepath: ./weights/
+  
+
+valid:
+  path: ./data/Validation/
+  batch_size: 8
+  num_workers: 4
+
+test:
+  path: ./data/test/
+  result_path: ./results
+
+MODEL_AVAILABLE: [
+  custom, 
+  efficientnetv2s,
+  mobilenetv3s,
+  regnetx800mf, regnetx8gf,
+  regnety32gf,
+  resnet18, resnet50, resnet152,
+  squeezenet1_1
+]
+
+OPTIMIZER_AVAILABLE:
+  - Adam
+
+LOSS_AVAILABLE:
+  - custom
+  - CE
+
+
+
+
+
+
+
+
+
+
+
