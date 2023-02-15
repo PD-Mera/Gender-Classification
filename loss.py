@@ -14,7 +14,7 @@ def calculate_weights(config):
     return torch.tensor(weights, dtype=torch.float32).to(device)
 
 
-class ClsfLoss():
+class ClsfLoss(nn.Module):
     def __init__(self):
         super(ClsfLoss, self).__init__()
         pass
