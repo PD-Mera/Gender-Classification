@@ -32,11 +32,11 @@ pip install -r requirements.txt
         `-- ...
 ```
 
-### Config
+## Config
 
 Modify config in `./cfg/config.yaml` or create your own `.yaml` config file with the same format.
 
-### Train
+## Train
 
 Simply run 
 
@@ -44,7 +44,7 @@ Simply run
 python train.py --cfg ./cfg/config.yaml
 ```
 
-### Experiment Results
+## Experiment Results
 
 Some experiment results
 
@@ -58,7 +58,7 @@ You can download weight file above and put in `weights` folder and run inference
 python infer.py
 ```
 
-#### Some inference results
+## Some inference results
 
 | Male | Female | 
 | :---: | :---: |
